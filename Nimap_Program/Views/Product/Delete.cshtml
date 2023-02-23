@@ -1,0 +1,49 @@
+﻿@model Nimap_Program.Models.Product
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3>Do you want to delete ?</h3>
+
+
+@using (Html.BeginForm())
+{
+    <div class="mb-3">
+        <label>Product Id</label>
+        @Html.DisplayFor(model=>model.Pid)
+    </div>
+
+    <div class="mb-3">
+        <label>Product Name</label>
+        @Html.DisplayFor(model=>model.Name)
+    </div>
+
+    <div class="mb-3">
+        <label>Product Price</label>
+        @Html.DisplayFor(model=>model.Price)
+    </div>
+
+    <div class="mb-3">
+        <label>Product CategoryID</label>
+        @Html.DisplayFor(model=>model.Categoryid)
+    </div>
+
+    <div class="mb-3">
+        <label>Product CategoryName</label>
+        @Html.DisplayFor(model=>model.CategoryName)
+    </div>
+
+    <div class="mb-3">
+        <input type="submit" value="Delete" class="btn btn-outline-danger" />
+    </div>
+
+
+
+
+
+
+
+}

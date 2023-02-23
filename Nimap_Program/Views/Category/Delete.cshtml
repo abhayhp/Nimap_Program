@@ -1,0 +1,50 @@
+﻿@model Nimap_Program.Models.Category
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3> Do you want to delete the category ?</h3>
+<br />
+
+@using (Html.BeginForm())
+{
+
+    <div class="mb-3">
+        <label>Category Id </label>
+        @Html.DisplayFor(model=>model.CategoryID)
+    </div>
+
+    <div class="mb-3">
+        <label>Category Name </label>
+        @Html.DisplayFor(model=>model.CategoryName)
+    </div>
+
+    <div class="mb-3">
+        <input type="submit" value="Delete" class="btn btn-outline-danger" />
+    </div>
+
+
+
+
+
+
+}
+
+
+
+
+   
+
+
+
+
+    
+
+    
+
+
+
+

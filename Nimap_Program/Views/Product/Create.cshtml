@@ -1,0 +1,47 @@
+﻿@model Nimap_Program.Models.Product
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3>Add New Product</h3>
+
+@using (Html.BeginForm()){
+
+    <div class="container">
+        <hr>
+
+        <div class="mb-3">
+            <label>Name</label>
+            @Html.TextBoxFor(model=>model.Name)
+        </div>
+
+
+        <div class="mb-3">
+            <label>Prie</label>
+            @Html.TextBoxFor(model=>model.Price)
+
+        </div>
+
+
+        <div class="mb-3">
+            <label>Categoryid</label>
+            @Html.TextBoxFor(model=>model.Categoryid)
+        </div>
+
+        <div class="mb-3">
+            <label>CategoryName</label>
+            @Html.TextBoxFor(model=>model.CategoryName)
+        </div>
+
+
+
+        <div class="mb-3">
+            <input type="submit" value="Save" class="btn btn-outline-primary" />
+        </div>
+
+    </div>
+}

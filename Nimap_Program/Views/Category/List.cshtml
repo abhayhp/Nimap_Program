@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3>Category List</h3>
+
+<b>@Html.ActionLink("Create new Category","Create", "Category")</b>
+
+<br />
+<br />
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Category_id</th>
+        <th>Category_Name</th>
+        <th>Action</th>
+
+    </tr>
+    @foreach (Category c in ViewBag.CategoryList)
+    {
+        <tr>
+            <td>@c.CategoryID</td>
+            <td>@c.CategoryName</td>
+            <td>
+                @Html.ActionLink("Edit","Edit", "Category", new { @catid = c.CategoryID }) |
+                @Html.ActionLink("Delete","Delete", "Category", new { @catid = c.CategoryID })
+            </td>
+
+        </tr>
+    }
+
+
+</table>

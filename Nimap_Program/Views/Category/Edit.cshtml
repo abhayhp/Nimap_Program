@@ -1,0 +1,43 @@
+﻿@model Nimap_Program.Models.Category
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+
+
+        <div class="form-group">
+            <label>Category Id</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model=>model.CategoryID,new { @readonly = "readonly" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Category Name</label>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model=>model.CategoryName)
+            </div>
+        </div>
+
+        <br>
+
+        <div class="col-md-10">
+            <p> <input type="submit" value="Update" class="btn btn-outline-primary" />   </p>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+}

@@ -1,0 +1,40 @@
+﻿@model Nimap_Program.Models.Product
+
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3>Edit Product</h3>
+
+@using(Html.BeginForm()){
+    <div class="col-md-10">
+        <label>Product Id</label>
+        @Html.TextBoxFor(model=>model.Pid,new { @readonly = "readonly" })
+    </div>
+    <div class="col-md-10">
+        <label>Product Name</label>
+        @Html.TextBoxFor(model=>model.Name)
+    </div>
+
+     <div class="col-md-10">
+            <label>Product Price</label>
+        @Html.TextBoxFor(model=>model.Price)
+     </div>
+
+    <div class="col-md-10">
+            <label>Product Category ID</label>
+        @Html.TextBoxFor(model=>model.Categoryid)
+    </div>
+
+    <div class="col-md-10">
+        <label>Product Category Name</label>
+        @Html.TextBoxFor(model=>model.CategoryName)
+    </div>
+
+    <div class="col-md-10">
+        <input type="submit" value="Update" class="btn btn-outline-primary" />
+    </div>
+}
